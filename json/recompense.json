@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "distinction": "Festival de Cannes",
+    "prix": [
+      {
+        "id": "1",
+        "film": "Long voyage vers la nuit",
+        "titre": "Palme d'or",
+        "annee": "1962"
+      },
+      {
+        "id": "2",
+        "film": "La Colline des hommes perdus",
+        "titre": "Palme d'or",
+        "annee": "1965"
+      },
+      {
+        "id": "3",
+        "film": "Le Rendez-Vous",
+        "titre": "Palme d'or",
+        "annee": "1969"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "distinction": "Oscars",
+    "prix": [
+      {
+        "id": "1",
+        "film": "Douze hommes en colère",
+        "titre": "Oscar du meilleur réalisateur",
+        "annee": "1957"
+      },
+      {
+        "id": "2",
+        "film": "Le Prince de New York",
+        "titre": "Oscar du meilleur scénario adapté",
+        "annee": "1981"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "distinction": "Golden Globes",
+    "prix": [
+      {
+        "id": "1",
+        "film": "Douze hommes en colère",
+        "titre": "Golden Globe du meilleur réalisateur",
+        "annee": "1957"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "distinction": "Festival de San Sebastián",
+    "prix": [
+      {
+        "id": "1",
+        "film": "L'Homme à la peau de serpent",
+        "titre": "lauréat de Meilleur réalisateur et sélection pour la Coquille d'or",
+        "annee": "1960"
+      },
+      {
+        "id": "2",
+        "film": "Un après-midi de chien",
+        "titre": "sélection pour la Coquille d'or",
+        "annee": "1975"
+      }
+    ]
+  }
+]

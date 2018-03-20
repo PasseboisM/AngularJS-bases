@@ -1,0 +1,14 @@
+<label for="cherche-titre">Recherche</label>
+<input id="cherche-titre" type="text" ng-model="searchValue">
+<div class="container">
+    <div ng-repeat="distinction in recompense">
+        <h2>{{distinction.distinction}}</h2>
+        <div>
+            <div ng-repeat="prix in distinction.prix | filter: searchValue">
+                <p>Oeuvre Récompensée : <span>{{prix.film}}</span></p>
+                <p>Nomination : <span>{{prix.titre}}</span></p>
+                <p>Année : <span>{{prix.annee}}</span></p>
+            </div>
+        </div>
+    </div>
+</div>

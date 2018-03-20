@@ -1,0 +1,19 @@
+<label for="cherche-titre">Recherche</label>
+<input id="cherche-titre" type="text" ng-model="searchValue">
+<div class="container">
+    <div ng-repeat="oeuvre in realisations">
+        <h2>{{ oeuvre.type }}</h2>
+        <div>
+            <div ng-repeat="film in oeuvre.realisation | filter: searchValue">
+                <h3>{{ film.titre }}</h3>
+                <figure ng-if="film.image">
+                    <img ng-if="oeuvre.type=='Cinéma'" src="images/films/{{ film.image }}" alt="affiche de {{film.titre}}">
+                    <img ng-if="oeuvre.type=='Télévision'" src="images/television/{{ film.image }}" alt="{{film.titre}}">
+                </figure>
+                <p ng-if="film.type">{{ film.type }}</p>
+                <p>Genre : <span ng-repeat="genre in film.genre">{{ genre }}<i ng-if="!$last">, </i></span></p>
+                <p>Année : <span>{{ film.annee }}</span></p>
+            </div>
+        </div>
+    </div>
+</div>

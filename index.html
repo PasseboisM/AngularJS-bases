@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/mise_en_page_typo.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js"></script>
+    <script src="https://code.angularjs.org/1.6.7/angular-route.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/controller.js"></script>
+    <script src="app/routes.js"></script>
+
+    <title>Sidney Lumet</title>
+</head>
+<body ng-app="monApp" ng-controller="accueilTitre">
+<header>
+    <div>
+        <h1><a href="#accueil">Sidney Lumet</a> {{ titre }}</h1>
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#bio">Biographie</a></li>
+            <li><a href="#films">Filmographie</a></li>
+            <li><a href="#recompense">Récompense</a></li>
+            <li><a href="#donnee">Analyse de données</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<main ng-view>
+
+</main>
+<footer><p><a href="#contact">Contact</a></p></footer>
+<script>
+    (function () {
+        "use strict";
+        var menu = document.querySelector('body>header>div>div');
+        var croix = document.querySelectorAll('body>header>div>div>span');
+        var navigation = document.querySelector('body>header>nav');
+        var header = document.querySelector('body>header>div');
+
+        function anime(evt) {
+            croix[0].classList.toggle("un");
+            croix[1].classList.toggle("deux");
+            croix[2].classList.toggle("trois");
+            for (var i = 0; i < croix.length; i++) {
+                var toutSpan = croix[i];
+                toutSpan.classList.toggle("bord");
+            }
+            navigation.classList.toggle('translation-navigation');
+            header.classList.toggle('translation-titre');
+        }
+
+        menu.addEventListener("click", anime);
+    }());
+</script>
+</body>
+</html>
